@@ -1,0 +1,37 @@
+# 编译生成的目标文件
+*.o
+*.obj
+*.exe
+*.out
+*.app
+
+# 调试符号文件
+*.dSYM/
+*.pdb
+*.ilk
+
+# 依赖文件
+*.d
+
+# 编译输出目录（如果你有这些目录）
+build/
+bin/
+obj/
+dist/
+
+# 编辑器/IDE 配置
+.vscode/
+.idea/
+*.swp
+*~
+
+# Visual Studio 相关
+.vs/
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# 如果你那个 library/ 文件夹是编译生成的输出目录，也忽略掉
+# 如果是你存放源码的目录，就不要加这一行
+library/
