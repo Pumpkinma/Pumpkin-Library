@@ -20,6 +20,7 @@ int getLength(const SeqList* s);
 bool getItem(const SeqList* s, int count, Book* b);
 int insItem_reverse(SeqList* s, int locate, const Book* book);
 bool removeItem(SeqList* s, int locate, Book* book);
+bool replaceItem(SeqList* s, int locate, const Book* book);
 bool expandSeqList(SeqList* s, int count, bool isAdd_isnotMultiplication);
 
 #endif

@@ -60,6 +60,12 @@ bool removeItem(SeqList* s, int locate, Book* book) {
 	return true;
 }
 
+bool replaceItem(SeqList* s, int locate, const Book* book) {
+	if (locate < 1 || locate > getLength(s)) return false;
+	s->list[locate - 1] = *book;
+	return true;
+}
+
 bool expandSeqList(SeqList* s, int count, bool isAdd_isnotMultiplication) {
 	int cap;
 	if (isAdd_isnotMultiplication) cap = s->max + count;

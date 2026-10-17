@@ -6,22 +6,21 @@ int main(void) {
 	bool run = true;
 	int get;
 	SeqList s;
+	bool settings[10];
+	float version = 1.03;
 	initSeqList(&s, 2);
 	while (run) {
-		printf("欢迎使用图书管理器\n请输入您要执行的操作\n\n");
-		printf("1.添加图书\n2.移除图书\n3.按顺序查找图书（输入顺序）\n4.查看所有图书\n5.借出图书\n6.归还图书\n7.退出\n\n");
+		printf("欢迎使用图书管理器 v%.2f\n请输入您要执行的操作\n\n", version);
+		printf("1.添加图书\n2.查找图书并执行操作\n3.设置\n4.退出\n\n");
 		printf("输入操作的序号即可\n");
-		if (!scanf("%d", &get)) break;
+		readInt(&get);
 
 		switch (get) {
 		case 1: addBook(&s); break;
-		case 2: removeBook(&s); break;
-		case 3: getBook(&s); break;
-		case 4: printBooks(&s); break;
-		case 5: borrowTo(&s); break;
-		case 6: borrowBack(&s); break;
-		case 7: run = false; break;
-		default: break;
+		case 2: chooseBook(&s); break;
+		case 3: setting(); break;
+		case 4: run = false; break;
+		default: system("cls"); break;
 		}
 	}
 }

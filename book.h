@@ -11,4 +11,6 @@ typedef struct Book {
 	bool isBorrow;
 }Book;
 
+Book createBook(int id, char bookName[], char author[]);
+
 #endif // !BOOK_H
